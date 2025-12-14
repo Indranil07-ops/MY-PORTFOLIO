@@ -1,0 +1,274 @@
+/* --- 1. Global Reset and Variables (Enhanced) --- */
+:root {
+    --primary-color: #A033FF; /* A vibrant purple for professionalism */
+    --secondary-color: #6C757D; 
+    --text-color: #343A40;
+    --background-light: #F4F7F6; /* Light grey background */
+    --background-dark: #FFFFFF;
+    --font-family: 'Roboto', sans-serif;
+    --header-bg: #212529; /* Dark header */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-dark);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- 2. Layout Utility Classes --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background: var(--background-light);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+/* --- 3. Header and Navigation (I.) --- */
+header {
+    background: var(--header-bg);
+    color: #fff;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.header-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #ADB5BD;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- 4. Buttons --- */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-right: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-weight: bold;
+    background: transparent;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* --- 5. Summary/About & Contact Card --- */
+.about-text p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+}
+
+.contact-card {
+    text-align: center;
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* --- 6. Skills, Languages, Certs Grid Layout --- */
+.skills-grid, .certification-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 for skills, 1/3 for languages/hobbies */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.skill-group h2, .language-group h2, .cert-group h2, .hobbies-group h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-list, .language-list, .cert-list, .hobbies-list {
+    list-style: none;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.skills-list li, .cert-list li, .hobbies-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.skills-list li::before, .cert-list li::before, .hobbies-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.language-list li strong {
+    display: block;
+    font-weight: 700;
+}
+
+/* --- 7. Education Section --- */
+.education-card {
+    background: var(--background-dark);
+    padding: 20px;
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.education-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+/* --- 8. Projects Section --- */
+.project-card {
+    background: var(--background-dark);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.project-card .technologies {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+
+/* --- 9. Footer (VII.) --- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--header-bg);
+    color: #ADB5BD;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- 10. Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    /* Stack elements vertically */
+    .skills-grid, .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .skill-group h2, .language-group h2, .cert-group h2, .hobbies-group h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Adjust header and nav */
+    header h1 {
+        font-size: 2em;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    /* Make buttons full width in mobile view */
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
